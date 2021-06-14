@@ -1,18 +1,17 @@
-##POKEDEX
-Nome dos integrantes:
+# POKEDEX
 
-Adriana
-Bianca
-Bruna Nunciato
-Renato 
+Nome dos integrantes: 
+- Adriana
+- Bianca
+- Bruna Nunciato
+- Renato
 
-Link do Surge: 
+Link do Surge: www.link.com.br
 
 O que funciona:
+- Item 1
+- Item 2
 
-Item 1
-Item 2
-O que não funciona:
-
-Item 3
-Item 4
+O que nÃ£o funciona: 
+- Item 3
+- Item 4
