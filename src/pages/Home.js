@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from "../components/Header/Header";
 import styled from 'styled-components';
 import CardPoke from '../components/CardPoke/CardPoke';
 // import Header from '../../src/components/Header/Header';
@@ -12,8 +13,7 @@ const ContainerCard = styled.div`
 function Home() {
   return (
     <div>
-      {/* <Header/> */}
-      <h1>Hello world</h1>
+      <Header />
       <ContainerCard>
           <CardPoke />
           <CardPoke />
