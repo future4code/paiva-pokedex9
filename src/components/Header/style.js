@@ -12,11 +12,12 @@ width: 20rem;
 export const BallContainer = styled.div`
 grid-column:3/4;
 img{
-   left:-8rem;
+   left:2rem;
     top:3.3rem;
     width: 7rem;
     margin:0.1rem;
     position: relative;
+    cursor:pointer;
 }
 img:hover{
     width: 9rem;
@@ -26,17 +27,6 @@ img:hover{
 `
 
 
-
-
-// width:12rem;
-// height:4rem;
-// border:1px solid #3761a8;
-// border-radius: 5px;
-// background-color:#feca1b;
-// color: #3761a8;
-// font-size:2rem;
-// padding:0.1rem;
-// padding-left:0.3rem;`
 
 
 
