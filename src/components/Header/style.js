@@ -1,32 +1,39 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
+<<<<<<< HEAD
 export const HeaderContainer= styled.div`
 display: grid;
 grid-template-columns: repeat(3,1fr);
 background-color: black;
 `
+=======
+export const HeaderContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ef5350;
+  
+  a {
+    grid-column-start: 2;
+    margin: auto;
+  }
+`;
+>>>>>>> master
 export const LogoContainer = styled.img`
-grid-column: 2/3;
-width: 20rem;
-`
+  width: 20rem;
+  margin: auto;
+`;
 export const BallContainer = styled.div`
-grid-column:3/4;
-img{
-   left:2rem;
-    top:3.3rem;
+  grid-column: 3/4;
+  margin: auto;
+  img {
+    left: 2rem;
+    top: 3.3rem;
     width: 7rem;
-    margin:0.1rem;
-    position: relative;
-    cursor:pointer;
-}
-img:hover{
+    margin: 0.1rem;
+    cursor: pointer;
+  }
+  img:hover {
     width: 9rem;
-    box-shadow: 0,0,0,4px red;
-}
-    
-`
-
-
-
-
-
+    box-shadow: 0, 0, 0, 4px red;
+  }
+`;
