@@ -1,23 +1,15 @@
 import styled from "styled-components";
 
-<<<<<<< HEAD
-export const HeaderContainer= styled.div`
-display: grid;
-grid-template-columns: repeat(3,1fr);
-background-color: black;
-`
-=======
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #ef5350;
-  
+  background-color: white;
+  border-bottom:2px solid blue;
   a {
     grid-column-start: 2;
     margin: auto;
   }
 `;
->>>>>>> master
 export const LogoContainer = styled.img`
   width: 20rem;
   margin: auto;
