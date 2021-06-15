@@ -1,16 +1,29 @@
-// import React from 'react';
-// import {HeaderContainer} from './style'
-// import PokemonLogo from '../../img/pokemon-logo.png'
-// import Pokeball from '../../img/pokeball.gif'
+import React from 'react';
+import {HeaderContainer,BallContainer, LogoContainer} from './style'
+import PokemonLogo from '../../img/pokemon-logo.png'
+import Pokeball from '../../img/pokeball.gif'
+import { useHistory } from "react-router-dom";
 
-// const Header = () => {
-//     return(
-//         <HeaderContainer>
-//             <img src={PokemonLogo}/>
-//             <img src={Pokeball}/>
-//         </HeaderContainer>
 
-//     )
+const Header = () => {
+    const history = useHistory();
 
-// }
-// export default Header
+    const goToPokedex = () =>{
+        history.push("/pokedex")
+    }
+
+    return(
+        <HeaderContainer>
+       
+            <LogoContainer src={PokemonLogo} alt="Logo Pokemon"/>
+          
+           <BallContainer>
+               <img onClick={goToPokedex} src={Pokeball}/>
+           </BallContainer>
+        
+        </HeaderContainer>
+
+    )
+
+}
+export default Header

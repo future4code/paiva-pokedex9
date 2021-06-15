@@ -4,7 +4,7 @@ import React from 'react';
 function Pokedex() {
     return (
       <div>
-        <h1>Hello world</h1>
+        <h1>pokedex</h1>
       </div>
     );
   }
