@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer= styled.div`
 display: grid;
 grid-template-columns: repeat(3,1fr);
-background-color: #ef5350;
+background-color: black;
 `
 export const LogoContainer = styled.img`
 grid-column: 2/3;

@@ -3,9 +3,9 @@ import React from 'react';
 
 function Pokedex() {
     return (
-      <div>
+      <div>   <Header />
         <h1>pokedex</h1>
-      </div>
+              </div>
     );
   }
   
