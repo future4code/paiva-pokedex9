@@ -1,3 +1,4 @@
+import { keyframes } from "styled-components"
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -8,6 +9,11 @@ export const Container = styled.div`
     height: 310px;
     border-radius: 5px;
     margin: 10px;
+
+    :hover {
+        transform: scale(1.1, 1.1);
+        transition-duration: 0.3s;
+    }
 `
 
 export const ContainerCircles = styled.div`
@@ -81,9 +87,50 @@ export const BorderWhite = styled.div`
         border: 1px white solid;
         margin-bottom: 2px;
     }
+
+    p{
+        text-transform: none;
+    }
 `
 
 export const ImgPoke = styled.img`
     margin-top: 10px;
     width: 110px;
+`
+
+export const ButtonPoke = styled.div`
+    border: none;
+    background-color: none;
+    
+
+    
+`
+
+export const Icon = styled.img`
+margin-top: 5px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5em white;
+    
+
+    &:hover{
+        animation: Icon 1.3s linear both infinite;
+        
+        @keyframes Icon {
+            0% {
+            transform: scale(1) rotateZ(0);
+            }
+            50% {
+            transform: scale(2) rotateZ(180deg);
+            }
+            100% {
+            transform: scale(1) rotateZ(360deg);
+            }
+        }
+    }
+`
+
+export const ContainerButton = styled.div`
+    display: flex;
+    justify-content: center;
 `
