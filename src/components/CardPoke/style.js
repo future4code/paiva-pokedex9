@@ -9,6 +9,12 @@ export const Container = styled.div`
     height: 310px;
     border-radius: 5px;
     margin: 10px;
+    margin-top:  40px;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
 
     :hover {
         transform: scale(1.1, 1.1);
@@ -89,13 +95,13 @@ export const BorderWhite = styled.div`
     }
 
     p{
-        text-transform: none;
+        text-transform: capitalize;
     }
 `
 
 export const ImgPoke = styled.img`
     margin-top: 10px;
-    width: 110px;
+    width: 100px;
 `
 
 export const ButtonPoke = styled.div`
