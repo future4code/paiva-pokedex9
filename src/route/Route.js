@@ -10,7 +10,7 @@ const RouteManager = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/pokedex" component={Pokedex} />
-        <Route exact path="/pokemon-detail" component={PokemonDetail} />
+        <Route exact path="/pokemon/:name" component={PokemonDetail} />
       </Switch>
     </BrowserRouter>
   );

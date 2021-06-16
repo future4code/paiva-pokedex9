@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Progress, Stack, Text, Tab } from "@chakra-ui/react";
+import axios from 'axios'
+import { useState, useEffect } from "react";
+import {Url_Base} from '../Url/Url'
+import {useParams} from 'react-router-dom'
+
 const DetailsContainer = styled.div`
   display:grid;;
   grid-auto-flow:column;
@@ -47,9 +52,37 @@ const Title = styled.h1`
     text-shadow: 1px 1px 0 #000;
     font-size:30px;
 `
+
+
+
+
 const PokemonDetail = () => {
-  return (
+
+  const [DetailPoke, setDetailPoke] = useState({habilidades:{},
+    ataques:{},peso:"",tipo:{}
+  })
+    
+    
+  const params = useParams();
+
+useEffect(()=>{
+
+      axios.get(`${Url_Base}/${params.name}`)
+      .then((res)=>{
+      setDetailPoke.habilidades(res.data.abilities.ability)
+
+        
+      })
+      .catch((erro)=>{
+        console.log(erro)
+      })
+      
+    
+})  
+
+ return (
     <DetailsContainer>
+    {console.log(DetailPoke.habilidades)}
       <DetailsCard1>
         <Title>Bulbasaur</Title>
         <img src={'https://raw.githubusercontent.com/pokeAPI/sprites/master/sprites/pokemon/1.png'} />
