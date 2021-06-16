@@ -1,50 +1,54 @@
-import Header from "../../components/Header/Header";
-import styled from 'styled-components';
 import CardPoke from '../../components/CardPoke/CardPoke';
-import { ToastContainer, toast, Zoom, Bounce} from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
+import {ContainerCard} from './style'
+import Header from '../../components/Header/Header';
 
 
-const ContainerCard = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2%;
-  color : black;
-`
+const Home = () => {
+  const AddPokemon = () => {
+    toast.success("🦄 Pokemon adicionado na Pokedex", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
-const Home = () =>{
-
-
-// toast.error("Pokemon adicionado na Pokedex")
-// toast.success("Pokemon adicionado na Pokedex")
-// toast.info("Pokemon adicionado na Pokedex")
-// toast.warn("Pokemon adicionado na Pokedex")
-
-
-return (
+  return (
     <div>
       <Header />
-      
-      <ContainerCard>
-          <CardPoke /> 
-          {/* <ToastContainer draggable={false}
-           transition={Zoom}
-           autoClose={8000}>
 
-           <button onClick={AddPokemon} >Add</button> */}
-           {/* </ToastContainer> */}
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
-          <CardPoke />
+      <button onClick={AddPokemon}>Adiciona Pokemon</button>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ContainerCard>
+        <CardPoke />
+
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
+        <CardPoke />
       </ContainerCard>
     </div>
   );
-}
+};
 
 export default Home;
