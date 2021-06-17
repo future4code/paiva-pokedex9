@@ -1,57 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
-import { BASE_URL } from "../Url/BASE_URL";
+import { BASE_URL } from "../../Url/BASE_URL";
 import { useParams } from "react-router-dom";
-import useRequestDetail from "../hooks/useRequestDetail";
-import Header from '../components/Header/Header'
+import useRequestDetail from "../../hooks/useRequestDetail";
+import Header from '../../components/Header/Header';
+import { DetailsContainer, DetailsCard1, DetailsCard2, Title } from './style';
 
-const DetailsContainer = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
-  margin-top: 150px;
-  h3 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0 10px 0;
-    padding: 10px 0px 0px 0px;
-    font-size: 14px;
-  }
-`;
-const DetailsCard1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  padding: 0px;
-  margin: 0;
-  img {
-    height: 300px;
-    width: 300px;
-    text-align: center;
-    padding: 0px;
-  }
-`;
-const DetailsCard2 = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  margin-left: 70px;
-  width: 125px;
-`;
-const Title = styled.h1`
-  color: orange;
-  font-size: 20px;
-  font-weight: bolder;
-  text-align: center;
-  height: 20px;
-  text-shadow: 1px 1px 0 #000;
-  font-size: 30px;
-  margin-bottom: 10px;
-`;
 
 const PokemonDetail = () => {
   const params = useParams();
