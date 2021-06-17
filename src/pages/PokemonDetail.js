@@ -97,7 +97,7 @@ const PokemonDetail = () => {
         <DetailsContainer>
           <DetailsCard1>
             <Title>{params.name}</Title>
-            <img src={detailPoke.sprites.front_default} />
+            <img src={detailPoke.sprites.other["official-artwork"].front_default} />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&
               detailPoke.types.map((type) => {
