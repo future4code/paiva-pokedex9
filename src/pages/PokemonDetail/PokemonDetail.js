@@ -51,7 +51,7 @@ const PokemonDetail = () => {
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
-            <Title>{poke.name}</Title>
+            <Title>{params.id}</Title>
             <img src={detailPoke.sprites.other["official-artwork"].front_default} />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&
