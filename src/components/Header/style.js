@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #ef5350;
-  
+  background-color: white;
+  border-bottom:2px solid blue;
   a {
     grid-column-start: 2;
     margin: auto;
