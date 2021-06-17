@@ -4,6 +4,7 @@ import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
 import { BASE_URL } from "../Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../hooks/useRequestDetail";
+import Header from '../components/Header/Header'
 
 const DetailsContainer = styled.div`
   display: grid;
@@ -91,6 +92,7 @@ const PokemonDetail = () => {
 
   return (
     <>
+      <Header />
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
