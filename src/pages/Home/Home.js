@@ -12,7 +12,7 @@ const Home = () => {
   const listPokemons = pokemons.map((poke) => {
     return <CardPoke poke={poke} />;
   });
-
+  console.log()
   const AddPokemon = () => {
     // toast.success("🦄 Pokemon adicionado na Pokedex", {
     //   position: "top-center",

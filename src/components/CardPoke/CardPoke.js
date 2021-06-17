@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";  
-import axios from "axios";
+import React from "react";
 import {
   Container,
   CircleBlue,
@@ -16,30 +15,10 @@ import {
 } from "./style";
 import pokeIcon from "../../img/poke-icon.png";
 import { Link } from "react-router-dom";
+import useRequestImage from '../../hooks/useRequestImage'
 
-function CardPoke(props) {  
-  const [imgPoke, setImgPoke] = useState([]);
-
-  useEffect(() => {
-    getImgPoke()
-  }, [])
-   const getImgPoke = () => {
-    axios
-      .get(props.poke.url)
-      .then((res) => {
-        // console.log(res.data.sprites.versions["generation-v"].["black-white"].animated.front_default)
-        setImgPoke(
-          res.data.sprites.versions["generation-v"]["black-white"].animated
-            .front_default
-        );
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }; 
-
-
-
+function CardPoke(props) {
+  const imgPoke = useRequestImage([], props.poke.url)
 
   return (
     <Container>
