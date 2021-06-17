@@ -1,1 +1,0 @@
-export const Url_Base="https://pokeapi.co/api/v2/pokemon"

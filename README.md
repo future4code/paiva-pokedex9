@@ -9,6 +9,8 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 
 - [ReactJS](https://reactjs.org/)
 - [styled-components](https://www.styled-components.com/)
+- [chakra-ui](https://chakra-ui.com/docs/getting-started)
+- [axios](https://github.com/axios/axios)
 
 
 

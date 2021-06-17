@@ -13,33 +13,13 @@ import {
   ButtonPoke,
   ContainerButton,
 } from "./style";
+import { Button } from "@chakra-ui/react";
 import pokeIcon from "../../img/poke-icon.png";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import useRequestImage from '../../hooks/useRequestImage'
 
 function CardPoke(props) {
-  const [imgPoke, setImgPoke] = useState([]);
-
-  useEffect(() => {
-    getImgPoke();
-  }, []);
-
-  const getImgPoke = () => {
-    axios
-      .get(props.poke.url)
-      .then((res) => {
-        // console.log(res.data.sprites.versions["generation-v"].["black-white"].animated.front_default)
-        setImgPoke(
-          res.data.sprites.versions["generation-v"]["black-white"].animated
-            .front_default
-        );
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  const imgPoke = useRequestImage([], props.poke.url)
 
   return (
     <Container>
@@ -61,11 +41,10 @@ function CardPoke(props) {
           <Icon src={pokeIcon} />
         </ButtonPoke>
         <Link to={`/pokemon/${props.poke.name}`}>
-          <button onClick={""}> detalhes</button>
-        </Link>  
-        <Link to={`/pokemon/${props.poke.name}/generation`}>
-          <button onClick={""}>ver gerações</button>
-          </Link>
+          <Button colorScheme="red" variant="solid">
+            Detalhes
+          </Button>
+        </Link>
       </ContainerButton>
     </Container>
   );
