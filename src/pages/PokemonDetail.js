@@ -69,7 +69,12 @@ const PokemonDetail = () => {
             <p>{stat.stat.name}</p>
             <p>{stat.base_stat}</p>
           </h3>
-          <Progress colorScheme="red" size="sm" max={150} value={stat.base_stat} />
+          <Progress
+            colorScheme="red"
+            size="sm"
+            max={150}
+            value={stat.base_stat}
+          />
         </>
       );
     });
@@ -99,15 +104,15 @@ const PokemonDetail = () => {
                 return <Text key={type.type.name}>{type.type.name}</Text>;
               })}
           </DetailsCard1>
-          <div>{poderes}</div>
+          <Stack spacing={2} justify="center">
+            <Title>Poderes</Title>
+            <div>{poderes}</div>
+          </Stack>
           <DetailsCard2>
             <Title>Ataques</Title>
             <br />
             <br />
-            <Stack spacing={2} justify="center">
-              <Title>Poderes</Title>
-              {ataques}
-            </Stack>
+            {ataques}
           </DetailsCard2>
         </DetailsContainer>
       ) : (
