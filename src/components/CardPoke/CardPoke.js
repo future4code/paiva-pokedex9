@@ -62,7 +62,10 @@ function CardPoke(props) {
         </ButtonPoke>
         <Link to={`/pokemon/${props.poke.name}`}>
           <button onClick={""}> detalhes</button>
-        </Link>
+        </Link>  
+        <Link to={`/pokemon/${props.poke.name}/generation`}>
+          <button onClick={""}>ver gerações</button>
+          </Link>
       </ContainerButton>
     </Container>
   );
