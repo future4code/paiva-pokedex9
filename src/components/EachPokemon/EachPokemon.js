@@ -14,15 +14,11 @@ import {
   ContainerButton,
 } from "../CardPoke/style";
 import {EachPokemonContainer} from './style'
-import pokeIcon from '../../img/poke-icon.png'
+import useRequestImage from "../../hooks/useRequestImage";
 
 
-const EachPokemon = () => {
-    const [pokemon, setPokemon] = useState({
-        name:"Pikachu",
-        img:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/6.gif"
-
-    })
+const EachPokemon = (props) => {
+  const imgPoke = useRequestImage([], props.poke.url)
 
   return (
     <EachPokemonContainer>
@@ -36,13 +32,18 @@ const EachPokemon = () => {
 
         <BorderBlack>
           <BorderWhite>
-            <ImgPoke src={pokemon.img} />
-            <p>{pokemon.name}</p>
+            <ImgPoke src={imgPoke} />
+            <p>{props.poke.name}</p>
           </BorderWhite>
         </BorderBlack>
         <ContainerButton>
+        <ButtonPoke>
+            Batalha
+            {/* <Icon src={pokeIcon} /> */}
+          </ButtonPoke>
           <ButtonPoke>
-            <Icon src={pokeIcon} />
+            Remover da Pokedex
+            {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
         </ContainerButton>
       </Container>

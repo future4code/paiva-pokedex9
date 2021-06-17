@@ -5,6 +5,7 @@ import { GlobalStateContext } from "./GlobalStateContext";
 
 export const GlobalState = (props) => {
   const [pokemons, setPokemons] = useState([]);
+  const [pokedex, setPokedex] = useState([])
 
   useEffect(() => {
     getPokemonNames();
@@ -19,9 +20,21 @@ export const GlobalState = (props) => {
       .catch((error) => console.log(error.message));
   };
 
+  const addToPokedex = (url) => {
+    const newPokedex = pokemons.filter((poke) => {
+      return poke.url === url
+    })
+
+    setPokedex([...pokedex, ...newPokedex])
+    console.log('lista a poke', {pokedex})
+  };
+
   const data = {
     pokemons,
     setPokemons,
+    pokedex,
+    setPokedex,
+    addToPokedex
   };
 
   return (
