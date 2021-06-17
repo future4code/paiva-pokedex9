@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import { BASE_URL } from "../Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../hooks/useRequestDetail";
+import Header from '../components/Header/Header'
 
 const DetailsContainer = styled.div`
   display: grid;
@@ -49,9 +48,9 @@ const Title = styled.h1`
   font-weight: bolder;
   text-align: center;
   height: 20px;
-  padding: 2px;
   text-shadow: 1px 1px 0 #000;
   font-size: 30px;
+  margin-bottom: 10px;
 `;
 
 const PokemonDetail = () => {
@@ -93,11 +92,12 @@ const PokemonDetail = () => {
 
   return (
     <>
+      <Header />
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
             <Title>{params.name}</Title>
-            <img src={detailPoke.sprites.front_default} />
+            <img src={detailPoke.sprites.other["official-artwork"].front_default} />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&
               detailPoke.types.map((type) => {
