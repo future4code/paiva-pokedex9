@@ -9,9 +9,9 @@ import { DetailsContainer, DetailsCard1, DetailsCard2, Title } from './style';
 
 const PokemonDetail = () => {
   const params = useParams();
-  const detailPoke = useRequestDetail([], `${BASE_URL}/${params.name}`);
+  const detailPoke = useRequestDetail([], `${BASE_URL}/${params.id}`);
 
-  console.log("DETALHES", detailPoke.stats);
+  console.log("DETALHES", detailPoke);
 
   const poderes =
     detailPoke.stats &&
@@ -44,13 +44,14 @@ const PokemonDetail = () => {
       );
     });
 
+
   return (
     <>
       <Header />
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
-            <Title>{params.name}</Title>
+            <Title>{poke.name}</Title>
             <img src={detailPoke.sprites.other["official-artwork"].front_default} />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&

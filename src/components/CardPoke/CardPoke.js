@@ -34,13 +34,13 @@ function CardPoke(props) {
         <BorderWhite>
           <ImgPoke src={imgPoke} />
           <p>{props.poke.name}</p>
-        </BorderWhite>
+         </BorderWhite>
       </BorderBlack>
       <ContainerButton>
         <ButtonPoke onClick={""}>
           <Icon src={pokeIcon} />
         </ButtonPoke>
-        <Link to={`/pokemon/${props.poke.name}`}>
+        <Link to={`/pokemon/${props.id}`}>
           <Button colorScheme="red" variant="solid">
             Detalhes
           </Button>
