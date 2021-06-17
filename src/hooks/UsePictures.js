@@ -8,7 +8,7 @@ const usePictures = (initialState, url) => {
     axios
       .get(url)
       .then((res) => {
-        setData(res.data);
+        setData(res.data.forms);
       })
       .catch((err) => alert(err));
   };
