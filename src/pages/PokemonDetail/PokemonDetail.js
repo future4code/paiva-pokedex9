@@ -1,5 +1,5 @@
 import React from "react";
-import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
+import { Progress, Stack, Text } from "@chakra-ui/react";
 import { BASE_URL } from "../../Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../../hooks/useRequestDetail";
