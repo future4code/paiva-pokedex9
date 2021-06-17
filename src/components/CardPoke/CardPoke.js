@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";  
+import axios from "axios";
 import {
   Container,
   CircleBlue,
@@ -15,18 +16,14 @@ import {
 } from "./style";
 import pokeIcon from "../../img/poke-icon.png";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
 
-function CardPoke(props) {
+function CardPoke(props) {  
   const [imgPoke, setImgPoke] = useState([]);
 
   useEffect(() => {
-    getImgPoke();
-  }, []);
-
-  const getImgPoke = () => {
+    getImgPoke()
+  }, [])
+   const getImgPoke = () => {
     axios
       .get(props.poke.url)
       .then((res) => {
@@ -39,7 +36,10 @@ function CardPoke(props) {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }; 
+
+
+
 
   return (
     <Container>

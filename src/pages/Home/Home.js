@@ -1,34 +1,17 @@
-import CardPoke from '../../components/CardPoke/CardPoke';
-import { ToastContainer, toast } from 'react-toastify'
-import { ContainerCard } from './style'
-import Header from '../../components/Header/Header';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-
+import React, { useContext } from "react";
+import CardPoke from "../../components/CardPoke/CardPoke";
+// import { ToastContainer, toast } from 'react-toastify'
+import { ContainerCard } from "./style";
+import Header from "../../components/Header/Header";
+import { GlobalStateContext } from "../../global/GlobalStateContext";
 
 const Home = () => {
-
-  const [pokemons, setPokemons] = useState([])
-
-  useEffect(() => {
-    getPoke()
-  }, [])
-
-  const getPoke = () => {
-    axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20')
-      .then((res) => {
-        // console.log(res.data.results)
-        setPokemons(res.data.results)
-
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
+  const { pokemons, setPokemons, imgPoke, setImgPoke } =
+    useContext(GlobalStateContext);
 
   const listPokemons = pokemons.map((poke) => {
-    return <CardPoke poke={poke} />
-  })
+    return <CardPoke poke={poke} />;
+  });
 
   const AddPokemon = () => {
     // toast.success("🦄 Pokemon adicionado na Pokedex", {
@@ -58,9 +41,7 @@ const Home = () => {
         draggable
         pauseOnHover
       /> */}
-      <ContainerCard>
-        {listPokemons}
-      </ContainerCard>
+      <ContainerCard>{listPokemons}</ContainerCard>
     </div>
   );
 };
