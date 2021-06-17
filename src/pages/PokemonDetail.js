@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import { BASE_URL } from "../Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../hooks/useRequestDetail";
@@ -49,9 +47,9 @@ const Title = styled.h1`
   font-weight: bolder;
   text-align: center;
   height: 20px;
-  padding: 2px;
   text-shadow: 1px 1px 0 #000;
   font-size: 30px;
+  margin-bottom: 10px;
 `;
 
 const PokemonDetail = () => {
