@@ -5,6 +5,7 @@ import { BASE_URL } from "../Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../hooks/useRequestDetail";
 import Header from '../components/Header/Header'
+import { Link } from "react-router-dom";
 
 const DetailsContainer = styled.div`
   display: grid;
@@ -57,6 +58,7 @@ const PokemonDetail = () => {
   const params = useParams();
   const detailPoke = useRequestDetail([], `${BASE_URL}/${params.name}`);
 
+
   console.log("DETALHES", detailPoke.stats);
 
   const poderes =
@@ -93,6 +95,9 @@ const PokemonDetail = () => {
   return (
     <>
       <Header />
+     <Link to={`/pokemon/${params.name}/images`}>
+      <button>ir para imagens</button>
+      </Link>
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
@@ -111,7 +116,7 @@ const PokemonDetail = () => {
           <DetailsCard2>
             <Title>Ataques</Title>
             <br />
-            <br />
+            <br /> 
             {ataques}
           </DetailsCard2>
         </DetailsContainer>
