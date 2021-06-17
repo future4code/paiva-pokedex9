@@ -13,6 +13,7 @@ import {
   ButtonPoke,
   ContainerButton,
 } from "./style";
+import { Button } from "@chakra-ui/react";
 import pokeIcon from "../../img/poke-icon.png";
 import { Link } from "react-router-dom";
 import useRequestImage from '../../hooks/useRequestImage'
@@ -40,7 +41,9 @@ function CardPoke(props) {
           <Icon src={pokeIcon} />
         </ButtonPoke>
         <Link to={`/pokemon/${props.poke.name}`}>
-          <button onClick={""}> detalhes</button>
+          <Button colorScheme="red" variant="solid">
+            Detalhes
+          </Button>
         </Link>
       </ContainerButton>
     </Container>

@@ -138,5 +138,5 @@ margin-top: 5px;
 
 export const ContainerButton = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 `
