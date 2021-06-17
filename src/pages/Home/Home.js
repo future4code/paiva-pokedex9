@@ -6,13 +6,11 @@ import Header from "../../components/Header/Header";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
 
 const Home = () => {
-  const { pokemons, setPokemons, imgPoke, setImgPoke } =
-    useContext(GlobalStateContext);
+  const { pokemons } = useContext(GlobalStateContext);
 
   const listPokemons = pokemons.map((poke) => {
     return <CardPoke poke={poke} />;
   });
-  console.log()
   const AddPokemon = () => {
     // toast.success("🦄 Pokemon adicionado na Pokedex", {
     //   position: "top-center",

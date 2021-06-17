@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from '../pages/Home/Home'
-import Pokedex from '../pages/Pokedex'
-import PokemonDetail from '../pages/PokemonDetail'
+import Home from "../pages/Home/Home";
+import Pokedex from "../pages/Pokedex";
+import PokemonDetail from "../pages/PokemonDetail";
 
 const RouteManager = () => {
   return (
