@@ -4,7 +4,7 @@ import { BASE_URL } from "../../constants/Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../../hooks/useRequestDetail";
 import Header from '../../components/Header/Header';
-import { DetailsContainer, DetailsCard1, DetailsCard2, DetailsCard3, Title } from './style';
+import { DetailsContainer, DetailsCard1, DetailsCard2, DetailsCard3, Title, ContainerMaster } from './style';
 import { Link } from "react-router-dom";
 import Pictures from "../../components/Pictures/Pictures";
 
@@ -47,7 +47,7 @@ const PokemonDetail = () => {
 
 
   return (
-    <>
+    <ContainerMaster>
       <Header />
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
@@ -80,7 +80,7 @@ const PokemonDetail = () => {
       ) : (
         <p>Carregando informações</p>
       )}
-    </>
+    </ContainerMaster>
   );
 };
 export default PokemonDetail;

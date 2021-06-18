@@ -4,7 +4,6 @@ export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background-color: #3761a8;
-  border-bottom:2px solid blue;
   a {
     grid-column-start: 3;
     margin: auto;

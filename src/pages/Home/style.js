@@ -6,3 +6,7 @@ export const ContainerCard = styled.div`
   gap: 2%;
   color : black;
 `
+export const HomeContainer = styled.div`
+background-color: rgb(238, 215, 75);
+height: 100vh;
+`
