@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import CardPoke from "../../components/CardPoke/CardPoke";
 import { ContainerCard } from "./style";
 import Header from "../../components/Header/Header";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
+import CardPoke from "../../components/CardPoke/CardPoke";
 
 const Home = () => {
   const { pokemons, pokedex, setPokemons, imgPoke, setImgPoke } =

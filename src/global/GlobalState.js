@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { BASE_URL } from "../Url/BASE_URL";
+import { BASE_URL } from '../constants/Url/BASE_URL';
 import { GlobalStateContext } from "./GlobalStateContext";
 
 export const GlobalState = (props) => {

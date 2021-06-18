@@ -12,7 +12,7 @@ const RouteManager = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/pokedex" component={Pokedex} />
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
-        <Route component={Error} />
+         <Route component={Error} />
       </Switch>
     </BrowserRouter>
   );
