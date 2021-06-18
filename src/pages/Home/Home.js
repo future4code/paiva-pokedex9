@@ -5,13 +5,14 @@ import { GlobalStateContext } from "../../global/GlobalStateContext";
 import CardPoke from "../../components/CardPoke/CardPoke";
 
 const Home = () => {
-  const { pokemons, setPokemons, imgPoke, setImgPoke } =
+  const { pokemons, pokedex, setPokemons, imgPoke, setImgPoke } =
     useContext(GlobalStateContext);
 
-  const listPokemons = pokemons.map((poke) => {
-    return <CardPoke poke={poke} />;
+  const listPokemons = pokemons.map((poke, index) => {
+
+    return <CardPoke poke={poke} id={index+1}/>
+ 
   });
-  console.log()
 
 
   return (
