@@ -33,6 +33,9 @@ function CardPoke(props) {
   //   })
   //   return index > -1
   // }
+  const goToDetail=((name)=>{
+    {localStorage.setItem("name", name)}
+  })
 
   return (
     <Container>
@@ -57,8 +60,8 @@ function CardPoke(props) {
           <RiAddCircleLine size='36px' />
         </ButtonPoke> : 'ja tá'} */}
 
-        <Link to={`/pokemon/${props.poke.name}`}>
-          <RiFileListLine size='32px' />
+        <Link to={`/pokemon/${props.id}`}>
+          <RiFileListLine size='32px' onClick={()=>goToDetail(props.poke.name)} />
         </Link>
       </ContainerButton>
     </Container>
