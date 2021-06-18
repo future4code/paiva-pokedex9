@@ -80,7 +80,7 @@ export const BorderBlack = styled.div`
 `
 
 export const BorderWhite = styled.div`
-    background-color: #FFFFFF;
+    background-color: rgb(19,246,7,0.9);
     height: 165px;
     width: 210px;
     border-radius: 2px 2px 2px 20px;

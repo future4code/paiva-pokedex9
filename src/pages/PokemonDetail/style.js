@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const DetailsContainer = styled.div`
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1px;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -37,8 +37,15 @@ export const DetailsCard2 = styled.div`
   flex-direction: column;
   padding: 0px;
   margin-left: 70px;
-  width: 125px;
+  width: 10rem;
 `;
+export const DetailsCard3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+ width: 12rem;
+`;
+
 export const Title = styled.h1`
   color: orange;
   text-align: center;
