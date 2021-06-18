@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const ContainerMaster=styled.div`
+background-color: rgb(238, 215, 75);
+height: 100vh;
+`
+
 
 export const DetailsContainer = styled.div`
     display: grid;

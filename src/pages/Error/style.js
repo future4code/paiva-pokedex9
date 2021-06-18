@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+background-color: rgb(238, 215, 75);
+height: 100vh;
+`
 
 export const ErrorContainer = styled.div`
    border-radius:20px;

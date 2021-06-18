@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ContainerCard } from "./style";
+import { ContainerCard, HomeContainer } from "./style";
 import Header from "../../components/Header/Header";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
 import CardPoke from "../../components/CardPoke/CardPoke";
@@ -16,10 +16,10 @@ const Home = () => {
 
 
   return (
-    <div>
+    <HomeContainer>
       <Header />
       <ContainerCard>{listPokemons}</ContainerCard>
-    </div>
+    </HomeContainer>
   );
 };
 
