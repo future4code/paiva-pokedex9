@@ -1,28 +1,18 @@
 import React from "react";
 import { Progress, Stack, Text } from "@chakra-ui/react";
-import { BASE_URL } from "../../Url/BASE_URL";
+import { BASE_URL } from "../../constants/Url/BASE_URL";
 import { useParams } from "react-router-dom";
-<<<<<<< HEAD:src/pages/PokemonDetail.js
-import useRequestDetail from "../hooks/useRequestDetail";
-import Header from '../components/Header/Header'
-import { Link } from "react-router-dom";
-=======
 import useRequestDetail from "../../hooks/useRequestDetail";
 import Header from '../../components/Header/Header';
 import { DetailsContainer, DetailsCard1, DetailsCard2, Title } from './style';
->>>>>>> master:src/pages/PokemonDetail/PokemonDetail.js
+import { Link } from "react-router-dom";
+import Pictures from "../../components/Pictures/Pictures";
 
 
 const PokemonDetail = () => {
   const params = useParams();
   const detailPoke = useRequestDetail([], `${BASE_URL}/${params.id}`);
 
-<<<<<<< HEAD:src/pages/PokemonDetail.js
-
-  console.log("DETALHES", detailPoke.stats);
-=======
-  console.log("DETALHES", detailPoke);
->>>>>>> master:src/pages/PokemonDetail/PokemonDetail.js
 
   const poderes =
     detailPoke.stats &&
@@ -59,9 +49,6 @@ const PokemonDetail = () => {
   return (
     <>
       <Header />
-     <Link to={`/pokemon/${params.name}/images`}>
-      <button>ir para imagens</button>
-      </Link>
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
@@ -80,10 +67,15 @@ const PokemonDetail = () => {
           <DetailsCard2>
             <Title>Ataques</Title>
             <br />
-            <br /> 
+            <br />
             {ataques}
-          </DetailsCard2>
+          </DetailsCard2> 
+          <Title>Imagens</Title>
+           <br />
+           <br />
+           <Pictures/>
         </DetailsContainer>
+       
       ) : (
         <p>Carregando informações</p>
       )}
