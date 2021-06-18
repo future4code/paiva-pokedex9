@@ -104,20 +104,9 @@ export const ImgPoke = styled.img`
     width: 100px;
 `
 
-export const ButtonPoke = styled.div`
+export const ButtonPoke = styled.button`
     border: none;
     background-color: none;
-    
-
-    
-`
-
-export const Icon = styled.img`
-margin-top: 5px;
-    width: 30px;
-    border-radius: 50%;
-    box-shadow: 0 0 0.5em white;
-    
 
     &:hover{
         animation: Icon 1.3s linear both infinite;
@@ -134,6 +123,16 @@ margin-top: 5px;
             }
         }
     }
+`
+
+export const Icon = styled.img`
+margin-top: 5px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5em white;
+    
+
+    
 `
 
 export const ContainerButton = styled.div`
