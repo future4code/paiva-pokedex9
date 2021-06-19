@@ -19,7 +19,24 @@ import {EachPokemonContainer} from './style'
 // import useRequestImage from "../../hooks/useRequestImage";
 
 const EachPokemon = (props) => {
-  
+  const {pokedex, setPokedex, pokemonDetail, setPokemonDetail} = useContext(GlobalStateContext)
+
+  const removeFromPokedex = () => {
+    const pokeIndex = pokedex.findIndex((item) => {
+      return item.name === props.poke.name
+    })
+
+    const newPokedexList = [...pokedex]
+    newPokedexList.splice(pokeIndex, 1)
+
+    const newPokemonList = [...pokemonDetail, props.poke]
+    const order = newPokemonList.sort((a, b) => {
+      return a.id - b.id
+    })
+
+    setPokedex(newPokedexList)
+    setPokemonDetail(order)
+  }
 
   return (
     <EachPokemonContainer>
@@ -42,10 +59,10 @@ const EachPokemon = (props) => {
             Batalha
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
-          <ButtonPoke>
+          <button onClick={removeFromPokedex}>
             Remover da Pokedex
             {/* <Icon src={pokeIcon} /> */}
-          </ButtonPoke>
+          </button>
         </ContainerButton>
       </Container>
     </EachPokemonContainer>
