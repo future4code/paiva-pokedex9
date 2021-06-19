@@ -134,6 +134,10 @@ export const Icon = styled.img`
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: space-around;
+
+  img{
+    width: 34px;
+  }
 `;
 
 export const ContainerAlert = styled.div`

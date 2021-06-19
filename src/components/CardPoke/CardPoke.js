@@ -17,15 +17,16 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
 import { RiAddCircleLine, RiFileListLine } from "react-icons/ri";
-
+import Pokebola from '../../img/pokebola.png'
+import Camera from '../../img/camera.png'
 
 function CardPoke(props) {
   const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
-
+  
   const addToPokedex = () => {
     const pokeIndex = pokemonDetail.findIndex((item) => {
       return item.name === props.poke.name
-    } )
+    })
 
     const newPokemonList = [...pokemonDetail]
     newPokemonList.splice(pokeIndex, 1)
@@ -33,11 +34,12 @@ function CardPoke(props) {
 
     setPokedex(newPokedexList)
     setPokemonDetail(newPokemonList)
-    
+    alert('Adicionado a Pokedex')
+
   }
 
-  const goToDetail=((name)=>{
-    {localStorage.setItem("name", name)}
+  const goToDetail = ((name) => {
+    { localStorage.setItem("name", name) }
   })
 
   return (
@@ -57,17 +59,16 @@ function CardPoke(props) {
       </BorderBlack>
       <ContainerButton>
         <ButtonPoke onClick={addToPokedex}>
-          <RiAddCircleLine size='36px' />
+          <img  src={Pokebola}/>
         </ButtonPoke>
-        {/* {pokedex && pokedex.name === props.poke.name? <ButtonPoke onClick={() => addToPokedex(props.poke.url)}>
-          <RiAddCircleLine size='36px' />
-        </ButtonPoke> : 'ja tá'} */}
 
         <Link to={`/pokemon/${props.id}`}>
-          <RiFileListLine
-            size="32px"
+          
+          <ButtonPoke
             onClick={() => goToDetail(props.poke.name)}
-          />
+          >
+            <img src={Camera}/>
+          </ButtonPoke>
         </Link>
       </ContainerButton>
     </Container>

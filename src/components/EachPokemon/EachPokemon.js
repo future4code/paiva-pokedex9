@@ -17,7 +17,8 @@ import {
   ButtonRemove
 } from "./style";
 import {EachPokemonContainer} from './style'
-// import useRequestImage from "../../hooks/useRequestImage";
+import Fight from '../../img/fight-pokemon.png'
+import Remove from '../../img/delete-sign.png'
 
 const EachPokemon = (props) => {
   const {pokedex, setPokedex, pokemonDetail, setPokemonDetail} = useContext(GlobalStateContext)
@@ -57,13 +58,13 @@ const EachPokemon = (props) => {
         </BorderBlack>
         <ContainerButton>
           <ButtonPoke>
-            Batalha
+            <img src={Fight}/>
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
-          <ButtonRemove onClick={removeFromPokedex}>
-            Remover da Pokedex
+          <ButtonPoke onClick={removeFromPokedex}>
+            <img src={Remove}/>
             {/* <Icon src={pokeIcon} /> */}
-          </ButtonRemove>
+          </ButtonPoke>
         </ContainerButton>
       </Container>
     </EachPokemonContainer>
