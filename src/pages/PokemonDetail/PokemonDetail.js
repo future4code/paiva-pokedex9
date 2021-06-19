@@ -50,16 +50,20 @@ const PokemonDetail = () => {
         )
       );
     });
+    const name = detailPoke.stats && detailPoke.stats.map((stat) =>{
+      return <Title>{stat.stat.name}</Title>
+    })
+
 
     
 
   return (
     <ContainerMaster>
-      <Header />
+      <Header />{console.log(detailPoke)}
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
-            <Title>{localStorage.getItem("name")}</Title>
+            <Title>{detailPoke.name}  </Title>
             <img
               src={detailPoke.sprites.other["official-artwork"].front_default}
             />

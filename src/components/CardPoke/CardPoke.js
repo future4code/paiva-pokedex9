@@ -34,12 +34,12 @@ function CardPoke(props) {
 
     setPokedex(newPokedexList)
     setPokemonDetail(newPokemonList)
-    alert('Adicionado a Pokedex')
+    // swal('Adicionado a Pokedex')
 
   }
 
-  const goToDetail = ((name) => {
-    { localStorage.setItem("name", name) }
+  const goToDetail=((id)=>{
+    {localStorage.setItem("id", id)}
   })
 
   return (
@@ -62,10 +62,10 @@ function CardPoke(props) {
           <img  src={Pokebola}/>
         </ButtonPoke>
 
-        <Link to={`/pokemon/${props.id}`}>
+        <Link to={`/pokemon/${props.poke.id}`}>
           
           <ButtonPoke
-            onClick={() => goToDetail(props.poke.name)}
+            onClick={() => goToDetail(props.poke.id)}
           >
             <img src={Camera}/>
           </ButtonPoke>
