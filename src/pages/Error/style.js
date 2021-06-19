@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-background-color: rgb(238, 215, 75);
-height: 100vh;
+  background-color: rgb(238, 215, 75);
 `
 
 export const ErrorContainer = styled.div`
@@ -12,7 +11,7 @@ export const ErrorContainer = styled.div`
    width:832px;
    margin: auto;   
    background-color: #fbe34c;
-   margin-top: 52px;   
+   margin-top: 7rem;   
    p{
      color:#3e5dc2;
      text-align:center;
