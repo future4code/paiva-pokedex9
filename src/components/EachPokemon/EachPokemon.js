@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import { GlobalStateContext } from "../../global/GlobalStateContext";
 import {
   Container,
   CircleBlue,
@@ -14,11 +16,11 @@ import {
   ContainerButton,
 } from "../CardPoke/style";
 import {EachPokemonContainer} from './style'
-import useRequestImage from "../../hooks/useRequestImage";
+// import useRequestImage from "../../hooks/useRequestImage";
 
 
 const EachPokemon = (props) => {
-  const imgPoke = useRequestImage([], props.poke.url)
+  
 
   return (
     <EachPokemonContainer>
@@ -32,7 +34,7 @@ const EachPokemon = (props) => {
 
         <BorderBlack>
           <BorderWhite>
-            <ImgPoke src={imgPoke} />
+            <ImgPoke src={props.poke.sprites.versions['generation-v']['black-white'].animated.front_default} />
             <p>{props.poke.name}</p>
           </BorderWhite>
         </BorderBlack>

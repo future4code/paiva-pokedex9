@@ -9,30 +9,30 @@ import {
   BorderBlack,
   BorderWhite,
   ImgPoke,
-  Icon,
   ButtonPoke,
   ContainerButton
 } from "./style";
-import { Button } from "@chakra-ui/react";
-import pokeIcon from "../../img/poke-icon.png";
 import { Link } from "react-router-dom";
-import useRequestImage from '../../hooks/useRequestImage'
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
 import { RiAddCircleLine, RiFileListLine } from 'react-icons/ri'
 
 function CardPoke(props) {
-  const imgPoke = useRequestImage([], props.poke.url)
-  const { addToPokedex, pokedex } = useContext(GlobalStateContext)
+  const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
 
+  const addToPokedex = () => {
+    const pokeIndex = pokemonDetail.findIndex((item) => {
+      return item.name === props.poke.name
+    } )
 
+    const newPokemonList = [...pokemonDetail]
+    newPokemonList.splice(pokeIndex, 1)
+    const newPokedexList = [...pokedex, props.poke]
 
-  // const isInPokedex = (pokemon) => {
-  //   const index = pokedex.findIndex((item) => {
-  //     return item.name === pokemon.name
-  //   })
-  //   return index > -1
-  // }
+    setPokedex(newPokedexList)
+    setPokemonDetail(newPokemonList)
+  }
+
   const goToDetail=((name)=>{
     {localStorage.setItem("name", name)}
   })
@@ -48,12 +48,12 @@ function CardPoke(props) {
 
       <BorderBlack>
         <BorderWhite>
-          <ImgPoke src={imgPoke} />
+          <ImgPoke src={props.poke.sprites.versions['generation-v']['black-white'].animated.front_default} />
           <p>{props.poke.name}</p>
          </BorderWhite>
       </BorderBlack>
       <ContainerButton>
-        <ButtonPoke onClick={() => addToPokedex(props.poke.url)}>
+        <ButtonPoke onClick={addToPokedex}>
           <RiAddCircleLine size='36px' />
         </ButtonPoke>
         {/* {pokedex && pokedex.name === props.poke.name? <ButtonPoke onClick={() => addToPokedex(props.poke.url)}>
