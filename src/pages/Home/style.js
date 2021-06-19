@@ -1,8 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ContainerCard = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2%;
-  color : black;
-`
+  color: black;
+  margin-bottom: 3rem;
+`;
+export const HomeContainer = styled.div``;

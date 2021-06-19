@@ -1,17 +1,24 @@
 import React from "react";
-import { Progress, Stack, Text, Flex } from "@chakra-ui/react";
-import { BASE_URL } from "../../Url/BASE_URL";
+import { Progress, Stack, Text } from "@chakra-ui/react";
+import { BASE_URL } from "../../constants/Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../../hooks/useRequestDetail";
-import Header from '../../components/Header/Header';
-import { DetailsContainer, DetailsCard1, DetailsCard2, Title } from './style';
-
+import Header from "../../components/Header/Header";
+import {
+  DetailsContainer,
+  DetailsCard1,
+  DetailsCard2,
+  DetailsCard3,
+  Title,
+  ContainerMaster,
+  Load,
+} from "./style";
+import Pictures from "../../components/Pictures/Pictures";
+import pokeball from "../../img/pokeball.gif";
 
 const PokemonDetail = () => {
   const params = useParams();
-  const detailPoke = useRequestDetail([], `${BASE_URL}/${params.name}`);
-
-  console.log("DETALHES", detailPoke.stats);
+  const detailPoke = useRequestDetail([], `${BASE_URL}/${params.id}`);
 
   const poderes =
     detailPoke.stats &&
@@ -45,13 +52,15 @@ const PokemonDetail = () => {
     });
 
   return (
-    <>
+    <ContainerMaster>
       <Header />
       {detailPoke && detailPoke.sprites ? (
         <DetailsContainer>
           <DetailsCard1>
-            <Title>{params.name}</Title>
-            <img src={detailPoke.sprites.other["official-artwork"].front_default} />
+            <Title>{localStorage.getItem("name")}</Title>
+            <img
+              src={detailPoke.sprites.other["official-artwork"].front_default}
+            />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&
               detailPoke.types.map((type) => {
@@ -68,11 +77,16 @@ const PokemonDetail = () => {
             <br />
             {ataques}
           </DetailsCard2>
+          <DetailsCard3>
+            <Title>Imagens</Title>
+            <br />
+            <Pictures />
+          </DetailsCard3>
         </DetailsContainer>
       ) : (
-        <p>Carregando informações</p>
+        <Load src={pokeball} />
       )}
-    </>
+    </ContainerMaster>
   );
 };
 export default PokemonDetail;
