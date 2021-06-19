@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import EachPokemon from '../../components/EachPokemon/EachPokemon'
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
-import { PokedexContainer, Container} from './style'
+import { PokedexContainer, Container, Title} from './style'
 
 
 function Pokedex() {
@@ -19,7 +19,7 @@ function Pokedex() {
   return (
           <PokedexContainer>
             <Header />
-            <h1>pokedex</h1>
+            <Title>pokedex</Title>
             <Container>
               {listPokedex}
             </Container>

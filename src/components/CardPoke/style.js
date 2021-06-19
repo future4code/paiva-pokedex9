@@ -134,4 +134,26 @@ export const Icon = styled.img`
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: space-around;
+
+  img{
+    width: 34px;
+  }
 `;
+
+export const ContainerAlert = styled.div`
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0 0 1em blue;
+    border-radius: 10px;
+
+    img{
+        width: 100px;
+    }
+`

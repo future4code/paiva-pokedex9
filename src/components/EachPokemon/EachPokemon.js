@@ -14,12 +14,31 @@ import {
   Icon,
   ButtonPoke,
   ContainerButton,
-} from "../CardPoke/style";
+  ButtonRemove
+} from "./style";
 import {EachPokemonContainer} from './style'
-// import useRequestImage from "../../hooks/useRequestImage";
+import Fight from '../../img/fight-pokemon.png'
+import Remove from '../../img/delete-sign.png'
 
 const EachPokemon = (props) => {
-  
+  const {pokedex, setPokedex, pokemonDetail, setPokemonDetail} = useContext(GlobalStateContext)
+
+  const removeFromPokedex = () => {
+    const pokeIndex = pokedex.findIndex((item) => {
+      return item.name === props.poke.name
+    })
+
+    const newPokedexList = [...pokedex]
+    newPokedexList.splice(pokeIndex, 1)
+
+    const newPokemonList = [...pokemonDetail, props.poke]
+    const order = newPokemonList.sort((a, b) => {
+      return a.id - b.id
+    })
+
+    setPokedex(newPokedexList)
+    setPokemonDetail(order)
+  }
 
   return (
     <EachPokemonContainer>
@@ -39,11 +58,11 @@ const EachPokemon = (props) => {
         </BorderBlack>
         <ContainerButton>
           <ButtonPoke>
-            Batalha
+            <img src={Fight}/>
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
-          <ButtonPoke >
-            Remover da Pokedex
+          <ButtonPoke onClick={removeFromPokedex}>
+            <img src={Remove}/>
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
         </ContainerButton>

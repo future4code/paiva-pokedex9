@@ -55,6 +55,8 @@ const PokemonDetail = () => {
     })
 
 
+    
+
   return (
     <ContainerMaster>
       <Header />{console.log(detailPoke)}
