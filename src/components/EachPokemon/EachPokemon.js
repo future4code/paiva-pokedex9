@@ -19,6 +19,7 @@ import {
 import {EachPokemonContainer} from './style'
 import Fight from '../../img/fight-pokemon.png'
 import Remove from '../../img/delete-sign.png'
+import Swal from "sweetalert2";
 
 const EachPokemon = (props) => {
   const {pokedex, setPokedex, pokemonDetail, setPokemonDetail} = useContext(GlobalStateContext)
@@ -38,6 +39,11 @@ const EachPokemon = (props) => {
 
     setPokedex(newPokedexList)
     setPokemonDetail(order)
+    Swal.fire(
+      '',
+      'Pokemon removido da Pokedex',
+      'success'
+    )
   }
 
   return (

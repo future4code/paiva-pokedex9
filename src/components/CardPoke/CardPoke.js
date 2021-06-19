@@ -19,6 +19,7 @@ import { GlobalStateContext } from "../../global/GlobalStateContext";
 import { RiAddCircleLine, RiFileListLine } from "react-icons/ri";
 import Pokebola from '../../img/pokebola.png'
 import Camera from '../../img/camera.png'
+import Swal from 'sweetalert2'
 
 function CardPoke(props) {
   const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
@@ -34,7 +35,12 @@ function CardPoke(props) {
 
     setPokedex(newPokedexList)
     setPokemonDetail(newPokemonList)
-    // swal('Adicionado a Pokedex')
+    Swal.fire({
+      text: 'Pokemon adicionado na Pokedex',
+      imageUrl: 'https://image.flaticon.com/icons/png/512/188/188921.png',
+      imageWidth: '100px',
+      
+    })
 
   }
 
