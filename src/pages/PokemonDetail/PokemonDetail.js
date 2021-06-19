@@ -3,16 +3,22 @@ import { Progress, Stack, Text } from "@chakra-ui/react";
 import { BASE_URL } from "../../constants/Url/BASE_URL";
 import { useParams } from "react-router-dom";
 import useRequestDetail from "../../hooks/useRequestDetail";
-import Header from '../../components/Header/Header';
-import { DetailsContainer, DetailsCard1, DetailsCard2, DetailsCard3, Title, ContainerMaster } from './style';
-import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import {
+  DetailsContainer,
+  DetailsCard1,
+  DetailsCard2,
+  DetailsCard3,
+  Title,
+  ContainerMaster,
+  Load,
+} from "./style";
 import Pictures from "../../components/Pictures/Pictures";
-
+import pokeball from "../../img/pokeball.gif";
 
 const PokemonDetail = () => {
   const params = useParams();
   const detailPoke = useRequestDetail([], `${BASE_URL}/${params.id}`);
-
 
   const poderes =
     detailPoke.stats &&
@@ -45,7 +51,6 @@ const PokemonDetail = () => {
       );
     });
 
-
   return (
     <ContainerMaster>
       <Header />
@@ -53,7 +58,9 @@ const PokemonDetail = () => {
         <DetailsContainer>
           <DetailsCard1>
             <Title>{localStorage.getItem("name")}</Title>
-            <img src={detailPoke.sprites.other["official-artwork"].front_default} />
+            <img
+              src={detailPoke.sprites.other["official-artwork"].front_default}
+            />
             <Text fontWeight="bold">Tipo:</Text>
             {detailPoke &&
               detailPoke.types.map((type) => {
@@ -69,16 +76,15 @@ const PokemonDetail = () => {
             <br />
             <br />
             {ataques}
-          </DetailsCard2> 
+          </DetailsCard2>
           <DetailsCard3>
-          <Title>Imagens</Title>
+            <Title>Imagens</Title>
             <br />
-           <Pictures/>
-           </DetailsCard3>
+            <Pictures />
+          </DetailsCard3>
         </DetailsContainer>
-       
       ) : (
-        <p>Carregando informações</p>
+        <Load src={pokeball} />
       )}
     </ContainerMaster>
   );

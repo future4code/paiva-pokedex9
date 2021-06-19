@@ -13,12 +13,11 @@ import {
   ButtonPoke,
   ContainerButton,
 } from "../CardPoke/style";
-import {EachPokemonContainer} from './style'
+import { EachPokemonContainer } from "./style";
 import useRequestImage from "../../hooks/useRequestImage";
 
-
 const EachPokemon = (props) => {
-  const imgPoke = useRequestImage([], props.poke.url)
+  const imgPoke = useRequestImage([], props.poke.url);
 
   return (
     <EachPokemonContainer>
@@ -37,7 +36,7 @@ const EachPokemon = (props) => {
           </BorderWhite>
         </BorderBlack>
         <ContainerButton>
-        <ButtonPoke>
+          <ButtonPoke>
             Batalha
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>

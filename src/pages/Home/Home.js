@@ -9,11 +9,8 @@ const Home = () => {
     useContext(GlobalStateContext);
 
   const listPokemons = pokemons.map((poke, index) => {
-
-    return <CardPoke poke={poke} id={index+1}/>
- 
+    return <CardPoke poke={poke} id={index + 1} />;
   });
-
 
   return (
     <HomeContainer>

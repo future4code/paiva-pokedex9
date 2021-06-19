@@ -2,28 +2,35 @@ import { keyframes } from "styled-components"
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    background-color: #ef5350;
-    width: 250px;
-    height: 310px;
-    border-radius: 5px;
-    margin: 10px;
-    margin-top:  40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ef5350;
+  width: 250px;
+  height: 310px;
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: 40px;
 
-    img{height:30rem;
-        width:auto
-    }
-    a{
-        text-decoration: none;
-        color: black;
-    }
+  img {
+    height: 30rem;
+    width: auto;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    /* :hover {
+  /* :hover {
         transform: scale(1.1, 1.1);
         transition-duration: 0.3s;
     } */
-`
+  @media (max-width: 768px) {    
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+`;
 
 export const ContainerCircles = styled.div`
     display: flex;
