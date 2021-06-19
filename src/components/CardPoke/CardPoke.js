@@ -11,11 +11,13 @@ import {
   ImgPoke,
   ButtonPoke,
   ContainerButton,
+  ContainerAlert
 } from "./style";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
 import { RiAddCircleLine, RiFileListLine } from "react-icons/ri";
+
 
 function CardPoke(props) {
   const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
@@ -31,6 +33,7 @@ function CardPoke(props) {
 
     setPokedex(newPokedexList)
     setPokemonDetail(newPokemonList)
+    
   }
 
   const goToDetail=((name)=>{

@@ -14,7 +14,8 @@ import {
   Icon,
   ButtonPoke,
   ContainerButton,
-} from "../CardPoke/style";
+  ButtonRemove
+} from "./style";
 import {EachPokemonContainer} from './style'
 // import useRequestImage from "../../hooks/useRequestImage";
 
@@ -59,10 +60,10 @@ const EachPokemon = (props) => {
             Batalha
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
-          <button onClick={removeFromPokedex}>
+          <ButtonRemove onClick={removeFromPokedex}>
             Remover da Pokedex
             {/* <Icon src={pokeIcon} /> */}
-          </button>
+          </ButtonRemove>
         </ContainerButton>
       </Container>
     </EachPokemonContainer>
