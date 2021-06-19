@@ -14,7 +14,6 @@ const Home = () => {
  
   });
 
-
   return (
     <HomeContainer>
       <Header />

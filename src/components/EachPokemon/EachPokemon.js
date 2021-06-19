@@ -15,12 +15,20 @@ import {
   ButtonPoke,
   ContainerButton,
 } from "../CardPoke/style";
+<<<<<<< HEAD
 import {EachPokemonContainer} from './style'
 // import useRequestImage from "../../hooks/useRequestImage";
-
+=======
+import { EachPokemonContainer } from "./style";
+import useRequestImage from "../../hooks/useRequestImage";
+>>>>>>> master
 
 const EachPokemon = (props) => {
+<<<<<<< HEAD
   
+=======
+  const imgPoke = useRequestImage([], props.poke.url);
+>>>>>>> master
 
   return (
     <EachPokemonContainer>
@@ -39,7 +47,7 @@ const EachPokemon = (props) => {
           </BorderWhite>
         </BorderBlack>
         <ContainerButton>
-        <ButtonPoke>
+          <ButtonPoke>
             Batalha
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>

@@ -1,28 +1,32 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const ContainerMaster=styled.div`
-background-color: rgb(238, 215, 75);
-height: 100vh;
-`
-
+export const ContainerMaster = styled.div`
+  height: 100vh;
+`;
 
 export const DetailsContainer = styled.div`
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    margin-left: 70px;
-    h3 {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin: 15px 0 10px 0;
-      padding: 10px 0px 0px 0px;
-      font-size: 14px;
-    }
-  `;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 70px;
+  h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 10px 0;
+    padding: 10px 0px 0px 0px;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+`;
 export const DetailsCard1 = styled.div`
   display: flex;
   flex-direction: column;
@@ -34,7 +38,13 @@ export const DetailsCard1 = styled.div`
     width: 300px;
     text-align: center;
     padding: 0px;
-    margin-right:20px;
+    margin-right: 20px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 export const DetailsCard2 = styled.div`
@@ -43,12 +53,26 @@ export const DetailsCard2 = styled.div`
   padding: 0px;
   margin-left: 70px;
   width: 10rem;
+  @media (max-width: 768px) {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
 export const DetailsCard3 = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px;
- width: 12rem;
+  width: 12rem;
+  @media (max-width: 768px) {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
 `;
 
 export const Title = styled.h1`
@@ -59,5 +83,17 @@ export const Title = styled.h1`
   font-size: 30px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-family: 'Pokemon Solid', sans-serif;                                                                                               
+  font-family: "Pokemon Solid", sans-serif;
+  @media (max-width: 768px) {
+    padding: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+`;
+export const Load = styled.img`
+  margin: auto;
+  width: 10rem;
 `;

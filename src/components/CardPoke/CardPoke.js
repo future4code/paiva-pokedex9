@@ -10,12 +10,12 @@ import {
   BorderWhite,
   ImgPoke,
   ButtonPoke,
-  ContainerButton
+  ContainerButton,
 } from "./style";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
-import { RiAddCircleLine, RiFileListLine } from 'react-icons/ri'
+import { RiAddCircleLine, RiFileListLine } from "react-icons/ri";
 
 function CardPoke(props) {
   const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
@@ -50,7 +50,7 @@ function CardPoke(props) {
         <BorderWhite>
           <ImgPoke src={props.poke.sprites.versions['generation-v']['black-white'].animated.front_default} />
           <p>{props.poke.name}</p>
-         </BorderWhite>
+        </BorderWhite>
       </BorderBlack>
       <ContainerButton>
         <ButtonPoke onClick={addToPokedex}>
@@ -61,7 +61,10 @@ function CardPoke(props) {
         </ButtonPoke> : 'ja tá'} */}
 
         <Link to={`/pokemon/${props.id}`}>
-          <RiFileListLine size='32px' onClick={()=>goToDetail(props.poke.name)} />
+          <RiFileListLine
+            size="32px"
+            onClick={() => goToDetail(props.poke.name)}
+          />
         </Link>
       </ContainerButton>
     </Container>
