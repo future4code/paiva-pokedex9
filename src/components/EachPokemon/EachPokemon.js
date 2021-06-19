@@ -40,7 +40,7 @@ const EachPokemon = (props) => {
             Batalha
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>
-          <ButtonPoke>
+          <ButtonPoke >
             Remover da Pokedex
             {/* <Icon src={pokeIcon} /> */}
           </ButtonPoke>

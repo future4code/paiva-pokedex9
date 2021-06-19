@@ -22,7 +22,12 @@ export const GlobalState = (props) => {
 
   const addToPokedex = (url) => {
     const newPokedex = pokemons.filter((poke) => {
-      return poke.url === url
+      if (poke.url === url){
+         return url
+      }else {
+        return poke.url
+      }
+     
     })
 
     setPokedex([...pokedex, ...newPokedex])

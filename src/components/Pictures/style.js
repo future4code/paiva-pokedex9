@@ -10,6 +10,8 @@ export const Container = styled.div`
   border-radius: 5px;
   margin: 10px;
   margin-top: 40px;
+  position: relative;
+    left: -2rem;
 
   img {
     height: 30rem;
