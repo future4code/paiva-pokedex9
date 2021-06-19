@@ -7,40 +7,47 @@ export const GlobalState = (props) => {
   const [pokemonsNames, setPokemonsNames] = useState([]);
   const [pokedex, setPokedex] = useState([])
   const [pokemonDetail, setPokemonDetail] = useState([])
+  const [currentPageUrl, setCurrentPageUrl] = useState(BASE_URL)
+  const [nextPageUrl, setNextPageUrl] = useState()
+  const [prevPageUrl, setPrevPageUrl] = useState()
+
 
   useEffect(() => {
-    getPokemonNames();
-  }, []);
+    getPokemonNames()
+  }, [currentPageUrl]);
 
   useEffect(() => {
-    pokemonsDetail()
+    pokemonsDetail();
   }, [pokemonsNames])
 
   const getPokemonNames = () => {
-    axios
-      .get(`${BASE_URL}?offset=0&limit=20`)
-      .then((response) => {
-        setPokemonsNames(response.data.results);
-      })
-      .catch((error) => console.log(error.message));
+    let cancel
+    axios.get(currentPageUrl, {
+      cancelToken: new axios.CancelToken(c => cancel = c)
+    }).then((response) => {
+      setNextPageUrl(response.data.next)
+      setPrevPageUrl(response.data.previous)
+      setPokemonsNames(response.data.results)
+    })
+    return () => cancel()
   };
 
   const pokemonsDetail = () => {
     const newPokemonDetail = []
     pokemonsNames.forEach((poke) => {
       axios.get(poke.url)
-      .then((res) => {
-        newPokemonDetail.push(res.data)
-        if (newPokemonDetail.length === 20) {
-          const order = newPokemonDetail.sort((a, b) => {
-            return a.id - b.id
-          })
-          setPokemonDetail(order)
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+        .then((res) => {
+          newPokemonDetail.push(res.data)
+          if (newPokemonDetail.length === 20) {
+            const order = newPokemonDetail.sort((a, b) => {
+              return a.id - b.id
+            })
+            setPokemonDetail(order)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     })
   }
 
@@ -48,7 +55,13 @@ export const GlobalState = (props) => {
     pokedex,
     setPokedex,
     pokemonDetail,
-    setPokemonDetail
+    setPokemonDetail,
+    currentPageUrl,
+    setCurrentPageUrl,
+    nextPageUrl,
+    setNextPageUrl,
+    prevPageUrl,
+    setPrevPageUrl
   };
 
   return (
