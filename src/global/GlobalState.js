@@ -4,37 +4,51 @@ import { BASE_URL } from '../constants/Url/BASE_URL';
 import { GlobalStateContext } from "./GlobalStateContext";
 
 export const GlobalState = (props) => {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemonsNames, setPokemonsNames] = useState([]);
   const [pokedex, setPokedex] = useState([])
+  const [pokemonDetail, setPokemonDetail] = useState([])
 
   useEffect(() => {
     getPokemonNames();
   }, []);
 
+  useEffect(() => {
+    pokemonsDetail()
+  }, [pokemonsNames])
+
   const getPokemonNames = () => {
     axios
       .get(`${BASE_URL}?offset=0&limit=20`)
       .then((response) => {
-        setPokemons(response.data.results);
+        setPokemonsNames(response.data.results);
       })
       .catch((error) => console.log(error.message));
   };
 
-  const addToPokedex = (url) => {
-    const newPokedex = pokemons.filter((poke) => {
-      return poke.url === url
+  const pokemonsDetail = () => {
+    const newPokemonDetail = []
+    pokemonsNames.forEach((poke) => {
+      axios.get(poke.url)
+      .then((res) => {
+        newPokemonDetail.push(res.data)
+        if (newPokemonDetail.length === 20) {
+          const order = newPokemonDetail.sort((a, b) => {
+            return a.id - b.id
+          })
+          setPokemonDetail(order)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
     })
-
-    setPokedex([...pokedex, ...newPokedex])
-    console.log('lista a poke', {pokedex})
-  };
+  }
 
   const data = {
-    pokemons,
-    setPokemons,
     pokedex,
     setPokedex,
-    addToPokedex
+    pokemonDetail,
+    setPokemonDetail
   };
 
   return (
