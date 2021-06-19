@@ -8,14 +8,15 @@ const Home = () => {
   const { pokemonDetail } =
     useContext(GlobalStateContext);
 
-  const listPokemons = pokemonDetail.map((poke, index) => {
+  const listPokemons = pokemonDetail.map((poke) => {
 
-    return <CardPoke poke={poke} id={index+1}/>
+    return <CardPoke poke={poke}/>
  
   });
 
   return (
     <HomeContainer>
+{console.log(pokemonDetail)}
       <Header />
       <ContainerCard>{listPokemons}</ContainerCard>
     </HomeContainer>

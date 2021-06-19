@@ -1,7 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom'
-import Header from "../Header/Header";
 import {
   Container,
   CircleBlue,
@@ -34,7 +33,7 @@ const Pictures = () =>{
     { img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/silver/${params.id}.png`},
     { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/${params.id}.png`},
         { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/${params.id}.png`},
-        // { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/${params.id.png}`},
+        { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/ruby-sapphire/${params.id}.png`},
         { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/diamond-pearl/${params.id}.png`},
         { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/${params.id}.png`},
         { img:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/platinum/${params.id}.png`},
