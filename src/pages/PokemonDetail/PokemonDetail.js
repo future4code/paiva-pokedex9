@@ -75,7 +75,7 @@ const PokemonDetail = () => {
             <div>{poderes}</div>
           </Stack>
           <DetailsCard2>
-            <Title>Atacks</Title>
+            <Title>Attacks</Title>
             <br />
             <br />
             {ataques}
