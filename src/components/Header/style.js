@@ -30,7 +30,8 @@ export const ButtonContainer = styled.div`
       margin: 0;
       width: 5rem;
     }
-`;
+  }
+`
 
 export const LogoContainer = styled.img`
   width: 15rem;
