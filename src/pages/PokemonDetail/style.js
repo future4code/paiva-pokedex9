@@ -23,7 +23,7 @@ export const DetailsContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 1.5rem;
+    margin: 0 2rem;
   }
 `;
 export const DetailsCard1 = styled.div`

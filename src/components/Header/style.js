@@ -8,9 +8,9 @@ export const HeaderContainer = styled.div`
     grid-column-start: 3;
     margin: auto;
   }
-
   @media (max-width: 768px) {
     display: flex;
+    width:100vw;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -24,6 +24,12 @@ export const ButtonContainer = styled.div`
     margin: 0.1rem;
     width: 5rem;
   }
+  @media (max-width: 768px) {
+    display: flex;
+    .BackButton {
+      margin: 0;
+      width: 5rem;
+    }
 `;
 
 export const LogoContainer = styled.img`
