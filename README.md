@@ -11,6 +11,7 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 - [styled-components](https://www.styled-components.com/)
 - [chakra-ui](https://chakra-ui.com/docs/getting-started)
 - [axios](https://github.com/axios/axios)
+- [material-ui](https://material-ui.com/pt/)
 
 
 
@@ -41,9 +42,21 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 Link do Surge: www.link.com.br
 
 O que funciona:
-- Item 1
-- Item 2
+- lista de 20 pokemons na página principal;
+- botão para ver os detalhes de cada pokemon;
+- botão para adicionar o pokemon à Pokedex;
+- o pokemon adicionado à Pokedex é removido da página principal;
+- cada pokemon é adicionado apenas uma vez à Pokedex;
+- botão na header para ir para a Pokedex;
+- visualização dos pokemons capturados na Pokedex; 
+- botão para remover o pokemon da Pokedex;
+- botão na header para voltar para a página principal;
+- botão para comparar o poder de batalha dos pokemons capturados na Pokedex;
+- paginação;
+- responsividade.
 
-O que nÃ£o funciona: 
-- Item 3
-- Item 4
+
+
+O que não funciona: 
+- 
+- 

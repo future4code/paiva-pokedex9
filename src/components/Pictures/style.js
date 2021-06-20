@@ -1,4 +1,3 @@
-import { keyframes } from "styled-components"
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -138,16 +137,13 @@ export const ButtonPoke = styled.button`
 `
 
 export const Icon = styled.img`
-margin-top: 5px;
-    width: 30px;
-    border-radius: 50%;
-    box-shadow: 0 0 0.5em white;
-    
-
-    
+   margin-top: 5px;
+   width: 30px;
+   border-radius: 50%;
+   box-shadow: 0 0 0.5em white;    
 `
 
 export const ContainerButton = styled.div`
-    display: flex;
-    justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
 `

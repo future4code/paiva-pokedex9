@@ -50,12 +50,9 @@ const PokemonDetail = () => {
         )
       );
     });
-    const name = detailPoke.stats && detailPoke.stats.map((stat) =>{
-      return <Title>{stat.stat.name}</Title>
-    })
-
-
-    
+  const name = detailPoke.stats && detailPoke.stats.map((stat) => {
+    return <Title>{stat.stat.name}</Title>
+  })
 
   return (
     <ContainerMaster>
@@ -67,24 +64,24 @@ const PokemonDetail = () => {
             <img
               src={detailPoke.sprites.other["official-artwork"].front_default}
             />
-            <Text fontWeight="bold">Tipo:</Text>
+            <Text fontWeight="bold">Type:</Text>
             {detailPoke &&
               detailPoke.types.map((type) => {
                 return <Text key={type.type.name}>{type.type.name}</Text>;
               })}
           </DetailsCard1>
           <Stack spacing={2} justify="center">
-            <Title>Poderes</Title>
+            <Title>Powers</Title>
             <div>{poderes}</div>
           </Stack>
           <DetailsCard2>
-            <Title>Ataques</Title>
+            <Title>Attacks</Title>
             <br />
             <br />
             {ataques}
           </DetailsCard2>
           <DetailsCard3>
-            <Title>Imagens</Title>
+            <Title>Images</Title>
             <br />
             <Pictures />
           </DetailsCard3>

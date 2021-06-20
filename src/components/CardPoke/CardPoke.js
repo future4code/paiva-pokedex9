@@ -10,20 +10,18 @@ import {
   BorderWhite,
   ImgPoke,
   ButtonPoke,
-  ContainerButton,
-  ContainerAlert
+  ContainerButton
 } from "./style";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
-import { RiAddCircleLine, RiFileListLine } from "react-icons/ri";
 import Pokebola from '../../img/pokebola.png'
 import Camera from '../../img/camera.png'
 import Swal from 'sweetalert2'
 
 function CardPoke(props) {
   const { pokedex, setPokedex, pokemonDetail, setPokemonDetail } = useContext(GlobalStateContext)
-  
+
   const addToPokedex = () => {
     const pokeIndex = pokemonDetail.findIndex((item) => {
       return item.name === props.poke.name
@@ -44,8 +42,8 @@ function CardPoke(props) {
 
   }
 
-  const goToDetail=((id)=>{
-    {localStorage.setItem("id", id)}
+  const goToDetail = ((id) => {
+    { localStorage.setItem("id", id) }
   })
 
   return (
@@ -65,15 +63,15 @@ function CardPoke(props) {
       </BorderBlack>
       <ContainerButton>
         <ButtonPoke onClick={addToPokedex}>
-          <img  src={Pokebola}/>
+          <img src={Pokebola} />
         </ButtonPoke>
 
         <Link to={`/pokemon/${props.poke.id}`}>
-          
+
           <ButtonPoke
             onClick={() => goToDetail(props.poke.id)}
           >
-            <img src={Camera}/>
+            <img src={Camera} />
           </ButtonPoke>
         </Link>
       </ContainerButton>
