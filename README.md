@@ -7,7 +7,7 @@
 <br/>
 <img src='./public/apresentacao.gif' heigth='120' />
 </div>
-<br/>
+<br/>gi
 ## :rocket: Tecnologias
 Este projeto foi desenvolvido usando as seguintes tecnologias:
 
