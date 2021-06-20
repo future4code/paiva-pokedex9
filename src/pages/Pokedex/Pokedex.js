@@ -3,8 +3,8 @@ import Header from "../../components/Header/Header";
 import EachPokemon from '../../components/EachPokemon/EachPokemon'
 import { useContext } from "react";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
-import { PokedexContainer, Container, Title, PokeImage,BattleContainer} from './style'
-import {Snackbar} from "@material-ui/core"
+import { PokedexContainer, Container, Title, PokeImage, BattleContainer } from './style'
+import { Snackbar } from "@material-ui/core"
 import { useState } from "react";
 
 

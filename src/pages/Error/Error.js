@@ -11,12 +11,12 @@ export const Error = () => {
     return (
         <Container>
             <ErrorContainer align="center">
-            <img src={PikachuNotFound} alt="Pikachu assustado" />
-            <p>Sorry! The page you are looking for isn't here.</p>
-            <button type="button" onClick={handleClick}>Back Home</button>
-        </ErrorContainer>
+                <img src={PikachuNotFound} alt="Pikachu assustado" />
+                <p>Sorry! The page you are looking for isn't here.</p>
+                <button type="button" onClick={handleClick}>Back Home</button>
+            </ErrorContainer>
         </Container>
-        
+
     )
 }
 

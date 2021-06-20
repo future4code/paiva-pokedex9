@@ -11,10 +11,8 @@ import {
   BorderBlack,
   BorderWhite,
   ImgPoke,
-  Icon,
   ButtonPoke,
-  ContainerButton,
-  ButtonRemove,
+  ContainerButton
 } from "./style";
 import { EachPokemonContainer } from "./style";
 import Fight from "../../img/fight-pokemon.png";
