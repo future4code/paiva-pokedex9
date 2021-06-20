@@ -15,15 +15,15 @@ export const HeaderContainer = styled.div`
 `;
 export const ButtonContainer = styled.div`
   grid-column: 1/2;
+  grid-row-start:1;
   margin: auto;
   cursor: pointer;
-  display: grid;
+
   .BackButton {
-    left: 2rem;
-    top: 0.1rem;
+
     margin: 0.1rem;
     width: 5rem;
-  }
+    }
   @media (max-width: 768px) {
     display: flex;
     .BackButton {
@@ -36,6 +36,7 @@ export const ButtonContainer = styled.div`
 export const LogoContainer = styled.img`
   width: 15rem;
   margin: 0 auto;
+
 `;
 export const BallContainer = styled.div`
   grid-column: 4/5;
