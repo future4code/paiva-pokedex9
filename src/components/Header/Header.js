@@ -24,7 +24,7 @@ const Header = () => {
         <LogoContainer src={PokemonLogo} alt="Logo Pokemon" />
       </Link>
 
-      {!history.location.pathname === "/pokedex" ? (
+      {history.location.pathname === "/pokedex" ? (
         <ButtonContainer>
           <img
             className="BackButton"
