@@ -39,7 +39,8 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
   </tr>
 <table>
 
-Link do Surge: www.link.com.br
+Link do Surge: http://paiva-pokedex9.surge.sh
+
 
 O que funciona:
 - lista de 20 pokemons na página principal;
