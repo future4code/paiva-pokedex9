@@ -26,7 +26,6 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      {console.log(pokemonDetail)}
       <Header />
       <ContainerCard>{listPokemons}</ContainerCard>
       <Pagination

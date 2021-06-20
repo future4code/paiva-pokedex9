@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const PokedexContainer = styled.div`
   background-color: rgb(238, 215, 75);
-  height: 100vh;      
-`
+  height: 100vh;
+`;
 export const BattleContainer = styled.div`
   display: flex;
   flex-direction: column;

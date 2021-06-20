@@ -8,10 +8,24 @@ export const HeaderContainer = styled.div`
     grid-column-start: 3;
     margin: auto;
   }
+
   @media (max-width: 768px) {
     display: flex;
   }
 `;
+export const ButtonContainer = styled.div`
+  grid-column: 1/2;
+  margin: auto;
+  cursor: pointer;
+  display: grid;
+  .BackButton {
+    left: 2rem;
+    top: 0.1rem;
+    margin: 0.1rem;
+    width: 5rem;
+  }
+`;
+
 export const LogoContainer = styled.img`
   width: 15rem;
   margin: 0 auto;
@@ -26,7 +40,7 @@ export const BallContainer = styled.div`
     margin: 0.1rem;
     cursor: pointer;
     &:hover {
-      width: 9rem;
+      width: 7rem;
       box-shadow: 0, 0, 0, 4px red;
     }
   }
