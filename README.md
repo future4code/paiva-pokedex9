@@ -3,7 +3,11 @@
     <br>
     Projeto Pokedex
 </h1>
-
+<br/>
+<br/>
+<img src='./public/apresentacao.gif' heigth='120' />
+</div>
+<br/>
 ## :rocket: Tecnologias
 Este projeto foi desenvolvido usando as seguintes tecnologias:
 
@@ -43,7 +47,7 @@ Link do Surge: http://paiva-pokedex9.surge.sh
 
 
 O que funciona:
-- lista de 20 pokemons na página principal;
+- lista de 20 pokemons por página principal;
 - botão para ver os detalhes de cada pokemon;
 - botão para adicionar o pokemon à Pokedex;
 - o pokemon adicionado à Pokedex é removido da página principal;
