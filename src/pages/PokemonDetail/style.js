@@ -54,7 +54,7 @@ export const DetailsCard2 = styled.div`
   padding: 0px;
   margin-left:70px; 
   margin-right:5px;   
-  width: 7rem;  
+  width: 7.5rem;  
   @media (max-width: 768px) {
     display: flex;
     padding-top: 2rem;
