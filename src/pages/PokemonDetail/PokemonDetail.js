@@ -74,17 +74,17 @@ const PokemonDetail = () => {
               })}
           </DetailsCard1>
           <Stack spacing={2} justify="center">
-            <Title>Poderes</Title>
+            <Title>Powers</Title>
             <div>{poderes}</div>
           </Stack>
           <DetailsCard2>
-            <Title>Ataques</Title>
+            <Title>Atacks</Title>
             <br />
             <br />
             {ataques}
           </DetailsCard2>
           <DetailsCard3>
-            <Title>Imagens</Title>
+            <Title>Images</Title>
             <br />
             <Pictures />
           </DetailsCard3>
