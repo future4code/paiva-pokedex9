@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  background-color: #3761a8;
+  background-color: #3761a8;  
   a {
     grid-column-start: 3;
     margin: auto;
   }
-
   @media (max-width: 768px) {
     display: flex;
+    width:100vw;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -24,6 +24,12 @@ export const ButtonContainer = styled.div`
     margin: 0.1rem;
     width: 5rem;
   }
+  @media (max-width: 768px) {
+    display: flex;
+    .BackButton {
+      margin: 0;
+      width: 5rem;
+    }
 `;
 
 export const LogoContainer = styled.img`

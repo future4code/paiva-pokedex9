@@ -7,11 +7,10 @@ export const ContainerMaster = styled.div`
 export const DetailsContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  margin-left: 70px;
+  margin-top: 40px;
+  margin-bottom: 10px;  
   h3 {
     width: 100%;
     display: flex;
@@ -32,13 +31,15 @@ export const DetailsCard1 = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 0px;
+  padding: 0px;  
+  margin-right:10px;  
   img {
     height: 300px;
     width: 300px;
     text-align: center;
     padding: 0px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 32px;   
   }
   @media (max-width: 768px) {
     display: flex;
@@ -49,10 +50,11 @@ export const DetailsCard1 = styled.div`
 `;
 export const DetailsCard2 = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   padding: 0px;
-  margin-left: 70px;
-  width: 10rem;
+  margin-left:70px; 
+  margin-right:5px;   
+  width: 7rem;  
   @media (max-width: 768px) {
     display: flex;
     padding-top: 2rem;
@@ -64,8 +66,8 @@ export const DetailsCard2 = styled.div`
 export const DetailsCard3 = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px;
-  width: 12rem;
+  padding: 0px;  
+  width: 10rem;  
   @media (max-width: 768px) {
     display: flex;
     padding-top: 2rem;
@@ -93,7 +95,7 @@ export const Title = styled.h1`
     margin: 0 auto;
   }
 `;
+
 export const Load = styled.img`
   margin: auto;
-  width: 10rem;
 `;

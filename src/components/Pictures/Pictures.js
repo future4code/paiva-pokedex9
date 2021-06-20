@@ -11,7 +11,6 @@ import {
   BorderBlack,
   BorderWhite,
   ImgPoke,
-  Icon,
   ButtonPoke,
   ContainerButton,
 } from "./style";
