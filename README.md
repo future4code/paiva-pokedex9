@@ -5,8 +5,8 @@
 </h1>
 <br/>
 <br/>
-<img src='./public/apresentacao.gif' heigth='120' />
-</div>
+
+
 <br/>
 ## :rocket: Tecnologias
 Este projeto foi desenvolvido usando as seguintes tecnologias:
@@ -60,8 +60,3 @@ O que funciona:
 - paginação;
 - responsividade.
 
-
-
-O que não funciona: 
-- 
-- 
